@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>留言板 - 辽宁鲲鹏科技有限公司</title>
+  <link rel="stylesheet" href="./css/styles.css">
+</head>
+<body>
+  <header>
+    <div id="site-nav"></div>
+  </header>
+
+  <main class="container board-wrapper">
+    <h1>留言板</h1>
+    <p>欢迎留下您的联系方式与需求，我们将尽快与您联系。</p>
+
+    <section class="form" aria-label="留言表单">
+      <div class="form-row">
+        <label for="name">姓名</label>
+        <input id="name" type="text" placeholder="请输入姓名" />
+      </div>
+      <div class="form-row">
+        <label for="phone">电话</label>
+        <input id="phone" type="tel" placeholder="请输入联系电话" />
+      </div>
+      <div class="form-row">
+        <label for="content">留言内容</label>
+        <textarea id="content" placeholder="请描述您的需求"></textarea>
+      </div>
+      <div class="actions">
+        <button id="submit" class="btn">提交</button>
+        <button id="clearAll" class="btn secondary">清空全部</button>
+      </div>
+    </section>
+
+    <section class="list" id="msg-list" aria-label="留言列表"></section>
+  </main>
+
+  <footer class="footer">
+    <p>© <span id="year"></span> 辽宁鲲鹏科技有限公司. 保留所有权利。</p>
+  </footer>
+
+  <script src="./js/nav.js"></script>
+  <script src="./js/messages.js"></script>
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>
+
+

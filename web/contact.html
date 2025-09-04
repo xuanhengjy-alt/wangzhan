@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>联系我们 - 辽宁鲲鹏科技有限公司</title>
+  <link rel="stylesheet" href="./css/styles.css">
+  <meta name="description" content="辽宁鲲鹏科技有限公司联系方式：商务、技术支持与招聘邮箱，及公司地址。">
+  <meta property="og:title" content="联系我们 - 辽宁鲲鹏科技有限公司">
+  <meta property="og:description" content="与我们取得联系，探索合作机会。">
+  <meta property="og:type" content="website">
+</head>
+<body>
+  <header>
+    <div id="site-nav"></div>
+  </header>
+
+  <main class="container" style="padding:24px 0 40px;">
+    <h1>联系我们</h1>
+    <div class="grid-3" style="margin-top:16px;">
+      <div class="card">
+        <h3>商务合作</h3>
+        <p>sales@ln-kunpeng.com</p>
+        <p>400-000-0000（工作日 9:00-18:00）</p>
+      </div>
+      <div class="card">
+        <h3>技术支持</h3>
+        <p>support@ln-kunpeng.com</p>
+        <p>工单系统将于邮件内自动生成</p>
+      </div>
+      <div class="card">
+        <h3>人才招聘</h3>
+        <p>hr@ln-kunpeng.com</p>
+        <p>欢迎投递简历与项目作品</p>
+      </div>
+    </div>
+
+    <section class="contact-box" style="margin-top:24px;">
+      <h2>公司地址</h2>
+      <p>辽宁省沈阳市和平区创新大道 88 号 鲲鹏科技中心</p>
+      <div class="map-box">
+        <img src="./assets/map-placeholder.jpg" alt="公司位置示意图" onerror="this.parentElement.textContent='请替换为真实地图图片：./assets/map-placeholder.jpg';" />
+      </div>
+    </section>
+
+    <section class="form" style="margin-top:16px;" aria-label="联系表单">
+      <div class="form-row">
+        <label for="c-name">姓名</label>
+        <input id="c-name" type="text" placeholder="请输入姓名" />
+      </div>
+      <div class="form-row">
+        <label for="c-email">邮箱</label>
+        <input id="c-email" type="email" placeholder="请输入邮箱" />
+      </div>
+      <div class="form-row">
+        <label for="c-msg">留言</label>
+        <textarea id="c-msg" placeholder="请输入您的咨询内容"></textarea>
+      </div>
+      <div class="actions">
+        <a class="btn" href="./messages.html">前往留言板提交</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>© <span id="year"></span> 辽宁鲲鹏科技有限公司. 保留所有权利。</p>
+  </footer>
+
+  <script src="./js/nav.js"></script>
+  <script src="./js/utils.js"></script>
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>
+
+
