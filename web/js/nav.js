@@ -3,13 +3,14 @@
   var navRoot = document.getElementById('site-nav');
   if (!navRoot) return;
 
+  var base = (window && window.NAV_BASE) ? window.NAV_BASE : './';
   var links = [
-    { href: './index.html', text: '首页' },
-    { href: './products.html', text: '产品介绍' },
-    { href: './news.html', text: '新闻动态' },
-    { href: './about.html', text: '关于我们' },
-    { href: './contact.html', text: '联系我们' },
-    { href: './messages.html', text: '留言板' }
+    { href: base + 'index.html', text: '首页' },
+    { href: base + 'products.html', text: '产品介绍' },
+    { href: base + 'news.html', text: '新闻动态' },
+    { href: base + 'about.html', text: '关于我们' },
+    { href: base + 'contact.html', text: '联系我们' },
+    { href: base + 'messages.html', text: '留言板' }
   ];
 
   function getPathName(url) {
