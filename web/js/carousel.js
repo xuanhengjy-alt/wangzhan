@@ -3,13 +3,13 @@
   var indicatorsRoot = document.getElementById('carousel-indicators');
   if (!slidesUl || !indicatorsRoot) return;
 
-  // 先写图片连接与名称（请在 web/assets 中自行放置同名图片）
-  // 图片文件名：banner1.jpg, banner2.jpg, banner3.jpg
-  // 也可使用 png：banner1.png, banner2.png, banner3.png
+  // 资源基准路径：根首页通过 window.ASSET_BASE = './web/'
+  var assetBase = (window && window.ASSET_BASE) ? window.ASSET_BASE : './';
+  // 图片文件名：banner1.jpg, banner2.jpg, banner3.jpg（放在 web/assets/ 下）
   var images = [
-    { src: './assets/banner1.jpg', alt: '公司愿景 Banner 1' },
-    { src: './assets/banner2.jpg', alt: '核心产品 Banner 2' },
-    { src: './assets/banner3.jpg', alt: '客户案例 Banner 3' }
+    { src: assetBase + 'assets/banner1.jpg', alt: '公司愿景 Banner 1' },
+    { src: assetBase + 'assets/banner2.jpg', alt: '核心产品 Banner 2' },
+    { src: assetBase + 'assets/banner3.jpg', alt: '客户案例 Banner 3' }
   ];
 
   var current = 0;

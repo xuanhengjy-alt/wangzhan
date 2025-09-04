@@ -5,7 +5,7 @@
 
   var base = (window && window.NAV_BASE) ? window.NAV_BASE : './';
   var links = [
-    { href: base + 'index.html', text: '首页' },
+    { href: '../index.html', text: '首页' },
     { href: base + 'products.html', text: '产品介绍' },
     { href: base + 'news.html', text: '新闻动态' },
     { href: base + 'about.html', text: '关于我们' },
@@ -18,10 +18,25 @@
   }
 
   var current = getPathName(window.location.href) || 'index.html';
+  // 特殊处理首页激活状态：根目录的 index.html 和 web/ 下的页面都算首页
+  var isHomePage = current === 'index.html' || current === '' || window.location.pathname.endsWith('/');
 
   var menuHtml = links.map(function (l) {
-    var isActive = getPathName(l.href) === current;
-    return '<a href="' + l.href + '" class="' + (isActive ? 'active' : '') + '">' + l.text + '</a>';
+    var isActive = false;
+    var href = l.href;
+    var className = '';
+    
+    if (l.text === '首页') {
+      isActive = isHomePage;
+      if (isHomePage) {
+        href = '#'; // 在首页时禁用链接
+        className = 'active disabled';
+      }
+    } else {
+      isActive = getPathName(l.href) === current;
+      className = isActive ? 'active' : '';
+    }
+    return '<a href="' + href + '" class="' + className + '">' + l.text + '</a>';
   }).join('');
 
   navRoot.innerHTML = `
